@@ -4,13 +4,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
   createGrid(16);
 
-   container.addEventListener('mouseenter', function(event) {
-     if (event.target.classList.contains('square')) {
-       darkenSquare(event.target);
-        }
+  container.addEventListener('mouseenter', function(event) {
+    if (event.target.classList.contains('square')) {
+      darkenSquare(event.target);
+    }
   });
-      function darkenSquare(square) { 
-          let currentColor = square.style.backgroundColor || 'rgb(255, 255, 255)';
+
+  function darkenSquare(square) {
+    let currentColor = square.style.backgroundColor || 'rgb(255, 255, 255)';
     let rgb = currentColor.match(/\d+/g);
     let r = parseInt(rgb[0]);
     let g = parseInt(rgb[1]);
@@ -26,6 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     square.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
   }
+
   function createInitialGrid() {
     container.innerHTML = '';
     container.style.gridTemplateColumns = 'repeat(16, 1fr)';
@@ -38,9 +40,11 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     }
   }
-   function darkenColorValue(value) { 
+
+  function darkenColorValue(value) {
     return Math.max(0, value - Math.round(value * 0.1));
-  }    
+  }
+
   function createGrid(size) {
     container.innerHTML = '';
     container.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
@@ -54,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 
-   function resetGrid() {
+  function resetGrid() {
     let newSize = prompt('Enter the number of squares per side for the new grid (maximum 100):');
     newSize = parseInt(newSize);
     if (!isNaN(newSize) && newSize > 0 && newSize <= 100) {
@@ -74,6 +78,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     return color;
   }
-   createInitialGrid();
+
+  createInitialGrid();
 });
+
 
