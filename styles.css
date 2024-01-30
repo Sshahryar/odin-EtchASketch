@@ -1,8 +1,6 @@
 body {
   font-family: Arial, sans-serif;
   text-align: center;
-  margin: 0;
-  padding: 0;
 }
 
 h1 {
@@ -12,13 +10,15 @@ h1 {
 #container {
   display: grid;
   margin: 20px auto;
-  max-width: 100vw;
-  max-height: 100vh;
+  max-width: 100%;
+  max-height: calc(100vh - 150px);
   border: 2px solid black;
 }
 
 .square {
   border: 1px solid #ddd;
+  width: 100%;
+  height: 100%;
 }
 
 button {
@@ -27,4 +27,5 @@ button {
   font-size: 16px;
   cursor: pointer;
 }
+
 
