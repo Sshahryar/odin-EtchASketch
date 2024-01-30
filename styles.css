@@ -10,7 +10,7 @@ h1 {
 #container {
   display: grid;
   margin: 20px auto;
-  width: 90vw;
+  max-width: 100%;
   max-height: calc(100vh - 150px);
   border: 2px solid black;
 }
@@ -27,4 +27,5 @@ button {
   font-size: 16px;
   cursor: pointer;
 }
+
 
