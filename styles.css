@@ -21,13 +21,14 @@ h1 {
 }
 
 .square {
-  width: calc((480px - 30px * 16) / 16);
-  height: calc((480px - 30px * 16) / 16);
+  width: calc((480px - 2px * 15) / 16);
+  height: calc((480px - 2px * 15) / 16);
   border-radius: 4px;
   border: 1px solid #ccc;
   transition: background-color 0.3s ease, transform 0.3s ease;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
 
 
 
